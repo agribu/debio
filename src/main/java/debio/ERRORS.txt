@@ -1,0 +1,33 @@
+- Multiple entries for profile ID (Not fix yet)
+Fehler: "Person mit id=119548860 ist mehr als einmal im Index" [ndb]
+https://www.deutsche-biographie.de/pnd119548860.html#ndbcontent
+
+- In ModelTest: buildDatabase (iteratively)
+
+(1) Person mit id=138441197 ist mehr als einmal im Index
+(2) Person mit id=138441197 ist mehr als einmal im Index
+
+IO Error! :: 11905938X :: https://www.deutsche-biographie.de/gnd11905938X.html
+Exception in thread "main" java.lang.NullPointerException
+	at debio.content.ContentRetriever.retrRawContent(ContentRetriever.java:61)
+	at debio.utils.CntToModelTransl.<init>(CntToModelTransl.java:47)
+	at debio.ModelTest.buildDatabase(ModelTest.java:26)
+	at debio.ModelTest.printIteratively(ModelTest.java:150)
+	at debio.ModelTest.main(ModelTest.java:162)
+
+File Not Found! :: 126960526/Tn :: https://www.deutsche-biographie.de/gnd126960526/Tn.html
+Exception in thread "main" java.lang.NullPointerException
+	at debio.content.ContentRetriever.retrRawContent(ContentRetriever.java:61)
+	at debio.utils.CntToModelTransl.<init>(CntToModelTransl.java:47)
+	at debio.ModelTest.buildDatabase(ModelTest.java:26)
+	at debio.ModelTest.printIteratively(ModelTest.java:150)
+	at debio.ModelTest.main(ModelTest.java:162)
+	
+[SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Person.idx)[3175|25796] Insert Person: d'Aspre van Hoobreuk, Constantin Freiherr (sfz1453)
+Transaction is being rolled back[SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Biography.idx)
+Transaction is being rolled back
+
+[SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Person.idx)
+[5580|25796] Insert Person: d'Aspre van Hoobreuk, Constantin Freiherr (sfz1453)
+Transaction is being rolled back[SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: Biography.idx)
+Transaction is being rolled back
